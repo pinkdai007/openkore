@@ -14,12 +14,37 @@ sub new {
 	$self->{weight_max} = 0;
 	$self->{exists} = 0;
 	$self->{type} = 0;
+
+	if($masterServer->{itemListType}) {
+		$self->{hooks} = Plugins::addHooks (
+			['packet_pre/item_list_start',        sub { $self->onitemListStart; }],
+			['packet_pre/item_list_end',        sub { $self->onitemListEnd; }],
+		);
+	}
+
 	return $self;
 }
 
 sub isReady {
 	my ($self) = @_;
 	return $self->{exists};
+}
+
+sub onitemListStart {
+	my ($self, $args) = @_;
+	if($args->{type} == 0x1) {
+		$self->clear();
+		if (!$self->{exists}) {
+			$self->{exists} = 1;
+		}
+	}
+}
+
+sub onitemListEnd {
+	my ($self) = @_;
+	if($current_item_list == 0x1) {
+		Plugins::callHook('cart_ready');
+	}
 }
 
 sub info {
@@ -38,7 +63,8 @@ sub info {
 
 sub onMapChange {
 	my ($self) = @_;
-	$self->{exists} = 0;
+	return if $masterServer->{itemListType};
+	# $self->{exists} = 0; # dont make sense
 	$self->clear();
 }
 
