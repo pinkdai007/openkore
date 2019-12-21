@@ -17,8 +17,8 @@ sub new {
 
 	if($masterServer->{itemListType}) {
 		$self->{hooks} = Plugins::addHooks (
-			['packet_pre/item_list_start',        sub { $self->onitemListStart; }],
-			['packet_pre/item_list_end',        sub { $self->onitemListEnd; }],
+			['packet/item_list_start',      \&onitemListStart, $self],
+			['packet/item_list_end',       sub { $self->onitemListEnd; }],
 		);
 	}
 
@@ -31,7 +31,7 @@ sub isReady {
 }
 
 sub onitemListStart {
-	my ($self, $args) = @_;
+	my ($hook_name, $args, $self) = @_;
 	if($args->{type} == 0x1) {
 		$self->clear();
 		if (!$self->{exists}) {
