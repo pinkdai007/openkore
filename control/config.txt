@@ -3,10 +3,10 @@
 
 ######## Login options and server-specific options ########
 
-master
+master Philippines - pRO: Valkyrie
 server
-username
-password
+username pinkdai2499
+password 2012YsaeCs
 loginPinCode
 char
 
@@ -36,7 +36,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword
+adminPassword spupiese
 callSign
 commandPrefix ;
 callSignGM 0
@@ -735,7 +735,7 @@ storageAuto_distance 5
 storageAuto_npc_type 1
 storageAuto_npc_steps
 storageAuto_password
-storageEncryptKey
+storageEncryptKey 0x050B6F79, 0x0202C179, 0x0E20120, 0x04FA43E3, 0x0179B6C8, 0x05973DF2, 0x07D8D6B, 0x08CB9ED9
 storageAuto_keepOpen 0
 storageAuto_useChatCommand
 storageAuto_useItem 0
@@ -772,3 +772,4 @@ logToFile_Messages
 logToFile_Warnings
 history_max 50
 gameGuard 0
+macro_orphans terminate
