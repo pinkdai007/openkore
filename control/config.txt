@@ -38,18 +38,18 @@ XKore_ID
 secureAdminPassword 1
 <<<<<<< HEAD
 <<<<<<< HEAD
-adminPassword crariswo
+adminPassword grahoceg
 
-adminPassword crariswo
+adminPassword grahoceg
 =======
-adminPassword crariswo
+adminPassword grahoceg
 
-adminPassword crariswo
+adminPassword grahoceg
 >>>>>>> f3a9954ff495dbaef16525de614c61ed52fbbb9c
 =======
-adminPassword geshisho
+adminPassword grahoceg
 
-adminPassword geshisho
+adminPassword grahoceg
 >>>>>>> f3a9954ff495dbaef16525de614c61ed52fbbb9c
 callSign
 commandPrefix ;
