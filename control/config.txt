@@ -36,9 +36,15 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword coulacre
+<<<<<<< HEAD
+adminPassword bivopres
 
-adminPassword coulacre
+adminPassword bivopres
+=======
+adminPassword geshisho
+
+adminPassword geshisho
+>>>>>>> f3a9954ff495dbaef16525de614c61ed52fbbb9c
 callSign
 commandPrefix ;
 callSignGM 0
