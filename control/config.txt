@@ -36,9 +36,9 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword cikawera
+adminPassword visharic
 
-adminPassword cikawera
+adminPassword visharic
 callSign
 commandPrefix ;
 callSignGM 0
